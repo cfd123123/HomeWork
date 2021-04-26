@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw1</title>
+    <link rel="stylesheet" type="text/css" href="hw1.css">
+</head>
+
+<body>
+    <hr style="width:1000px;" />
+    <h1 id="title">Please Enter Your Details For Our Dating Website!</h1>
+
+    <form>
+        <fieldset class="fds">
+            <legend class="uniform_legend">Your Face</legend>
+            <table class="table_outline">
+                <tr>
+                    <td>Your image:</td>
+                    <td><input type="submit" value="Choose File" /> No file chosen</td>
+                </tr>
+                <tr>
+                    <td>Image preview:</td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset class="fds">
+            <legend class="uniform_legend">Your General Details</legend>
+            <table class="table_outline">
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" placeholder="Your Full name" /></td>
+                </tr>
+
+                <tr>
+                    <td>Gender:</td>
+                    <td><input type="radio" id="male" name="gender">
+                        <lable for="male">Male</lable>
+                        <input type="radio" id="female" name="gender">
+                        <lable for="female">Female</lable>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="text" style="width:30px" value="18" maxLength="3" /></td>
+                </tr>
+
+                <tr>
+                    <td>Date of birth</td>
+                    <td><input type="date" /></td>
+                </tr>
+
+                <tr>
+                    <td>Favorite Color:</td>
+                    <td id="color_1"><input type="color" /></td>
+                </tr>
+
+                <tr>
+                    <td>Which country</td>
+                    <td>
+                        <select style="width:100px">
+                            <option></option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+
+        <fieldset class="fds">
+            <legend class="uniform_legend">Your Indicators</legend>
+            <table class="table_outline">
+                <tr>
+                    <td>Height:</td>
+                    <td id="indicators">
+                        <label for="height">Short</label>
+                        <input type="range" id="height" />
+                        <label style="background:rgb(105, 5, 92)" for="height">Tall</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Salary:</td>
+                    <td id="indicators">
+                        <label for="money">Poor</label>
+                        <input type="range" id="money" />
+                        <label style="background:rgb(105, 5, 92)" for="money">Rich</label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+
+        <fieldset class="fds">
+            <legend class="uniform_legend">Your Contact Information</legend>
+            <table class="table_outline">
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" /> </td>
+                </tr>
+                <tr>
+                    <td>Mobile:</td>
+                    <td><input type="text" /> </td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" style="padding: 20px" /> </td>
+                </tr>
+                <tr>
+                    <td>Method to contact you:</td>
+                    <td>
+                        <input type="checkbox" />Email
+                        <input type="checkbox" />Whatsapp
+                        <input type="checkbox" />In-app char
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+        <input type="submit" style="margin-left: 250px; margin-top: 7px">
+        <hr style="width:1000px;" />
+    </form>
+</body>
+
+</html>

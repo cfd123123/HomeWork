@@ -1,0 +1,45 @@
+
+#title{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+.fds{
+    min-width: 100px;
+    margin-left: 250px;
+    width:1000px;
+    border-style: solid;  
+    border-width: 10px; 
+    border-color: rgb(248, 222, 74);
+    height: auto;
+    background-color: rgb(252, 251, 220);
+}
+
+fieldset p{
+    font-size : 10px;
+    margin-left: 100px;
+    text-align:start;
+
+}
+
+.table_outline{
+    margin-left: 150px;
+    
+}
+
+#indicators label{
+    width:60px;
+    display:inline-block;
+    text-align: center;
+    background:rgb(143, 10, 10);
+    color:#FFF
+}
+
+table tr td{
+    text-align: left;
+}
+
+#color_1{
+    margin-left: 1px;
+}
