@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /* 1. slide P45:
+        •   Write a JavaScript program to delete the rollno property from the following object. Also print the object before 
+        and after deleting the property.
+        */
+        var student = {
+            name: "David Rayy",
+            sclass: "VI",
+            rollno: 12
+        };
+
+        console.log(student);
+        delete student.rollno;
+        console.log(student);
+
+
+        /*  Display the length of the object (count of properties using
+                Enumeration and Object.keys)
+        */
+        // By Enumeration:
+        let i = 0;
+        for (let properties in student) {
+            i++;
+        }
+        console.log(i);
+
+        // By Object.keys:
+        console.log(Object.keys(student).length);
+
+
+    </script>
+
+
+
+
+    <script>
+        // slide P46:
+        /*
+        • Write a JavaScript program to sort an array of JavaScript objects.
+        Expected Output:
+        [
+        { author: "Walter Isaacson", libraryID: 4264, title: "Steve Jobs" }, 
+        { author: "Suzanne Collins", libraryID: 3245, title: "Mockingjay: The Final Book 
+        of The Hunger Games" }, 
+        { author: "The Road Ahead", libraryID: 1254, title: "Bill Gates" }]
+        */
+        var library = [
+            { title: 'The Road Ahead', author: 'Bill Gates', libraryID: 1254 },
+            { title: 'Walter Isaacson', author: 'Steve Jbs', libraryID: 4264 },
+            { title: 'Mockingjay: The Final Book of The Hunger Games', author: 'Suzanne Collins', libraryID: 3245 }];
+
+
+        function compare(libraryID) {
+            return function (obj1, obj2) {
+                return obj2.libraryID - obj1.libraryID;
+            }
+        }
+        library.sort(compare('libraryID'));
+
+
+        function exchange(library) { //exchange the value of title and author for index 0 and 2
+            let temp = library[0].title;
+            library[0].title = library[0].author;
+            library[0].author = temp;
+
+            temp = library[2].title;
+            library[2].title = library[2].author;
+            library[2].author = temp;
+        }
+        function getRes(library) {
+            exchange(library);
+            let res = new Array(); //result array
+            for (var lb in library) {
+                //var map = new Map();
+                var key = Object.keys(library[lb]);
+                var val = Object.values(library[lb]);
+                /*
+                for(var i = 0; i < 3; i++){
+                    map.set(key[i], val[i]);
+                    //console.log(library[lb][i]);
+                }
+                */
+                var arr = Object.keys(library[lb]).sort(); //sort by attributes alphabetically
+                var copy = {};
+                for (var i = 0; i < arr.length; i++) {
+                    // add key-value to an array:  obj[key] = value;
+                    copy[arr[i]] = library[lb][arr[i]]; // can't use library[lb].arr[i] since if use "." , attributes can not be a variable 
+                }
+                res.push(copy);
+            }
+            return res;
+        }
+        console.log(getRes(library));
+
+
+    </script>
+</body>
+
+</html>
